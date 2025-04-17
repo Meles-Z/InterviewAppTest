@@ -1,6 +1,5 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'package:interview_test_app/core/utils/generate_random_number.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -12,17 +11,17 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   Color _backgroundColor=Colors.white;
   
-  void changeBackgroundColor(){
+ void changeBackgroundColor() {
+  setState(() {
+    _backgroundColor = Color.fromARGB(
+      255,
+      myRandomNumber(256), 
+      myRandomNumber(256), 
+      myRandomNumber(256), 
+    );
+  });
+}
 
-    final Random random=Random();
-     setState(() {
-       _backgroundColor=Color.fromARGB(
-        random.nextInt(255),
-        random.nextInt(255), 
-        random.nextInt(255), 
-        random.nextInt(255));
-     });
-  }
   
   @override
   Widget build(BuildContext context) {
