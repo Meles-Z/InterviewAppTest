@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
           centerTitle: true,
         ),
         body: const Center(
-          child: Text("Hello There!"),
+          child: Text("Hello There"),
         ),
       ),
     );
